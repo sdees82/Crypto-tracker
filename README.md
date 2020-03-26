@@ -1,4 +1,5 @@
-The app tracks the lastest cryptocurrency news and prices
+The app tracks the lastest cryptocurrency news and prices.
+Demo can be found [here](https://festive-cori-67246d.netlify.com)
 
 ## Available Scripts
 
