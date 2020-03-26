@@ -1,0 +1,26 @@
+nav{
+    background: #2b2d32;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    height: 4rem;
+}
+
+nav ul li{
+    display: inline-block;
+    padding-right: 1rem;
+    color: #7cee00;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+}

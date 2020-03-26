@@ -1,0 +1,49 @@
+.crypto-card{
+    color: #000;
+    width: 200px;
+    border: 1px solid gray;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.crypto-card img{
+    width: 75px;
+}
+
+.crypto-card h2{
+    font-size: 1.5rem;
+    color: #7cee00;
+}
+
+.crypto-card p{
+    margin: 0;
+    padding: .1rem 0;
+}
+.crypto-card p:nth-child(3){
+    color: red;
+    font-weight: bold;
+    color: #ababad;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.market{
+    font-size: 1rem;
+}
+.crypto-card p:nth-child(5){
+    font-size: 1rem;
+}
+.crypto-card  p span{
+    font-size: 1rem;
+}
+
+.red{
+    color: red;
+    font-weight: bold;
+}
+
+.green{
+    color: #7cee00;
+    font-weight: bold;
+}
