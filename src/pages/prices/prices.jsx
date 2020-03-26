@@ -1,6 +1,8 @@
 import React from 'react';
 import CryptoCardList from "../../components/cryptoCardList/cryptoCardList.component";
+import Loader from 'react-loader-spinner';
 import "./prices.style.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 class Prices extends React.Component {
     constructor(props) {
@@ -23,8 +25,21 @@ class Prices extends React.Component {
         return ( 
             <div className="container">
                 <h1>PRICES</h1>
-                <p>Last updated: {this.state.updated}</p>
-                <CryptoCardList coins={this.state.coins}/>
+                {
+                    this.state.coins.length === 0 ? <Loader
+                    type="ThreeDots"
+                    color="#2b2d32"
+                    height={100}
+                    width={100}
+                    timeout={3000} //3 secs
+           
+                 /> : (
+                    <React.Fragment>
+                    <p>Last updated: {this.state.updated}</p>
+                    <CryptoCardList coins={this.state.coins}/>
+                </React.Fragment>
+                 )
+                }
             </div>
          );
     }

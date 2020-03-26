@@ -1,6 +1,8 @@
 import React from 'react';
-import CardList from "../../components/cardList/cardList.component"
+import CardList from "../../components/cardList/cardList.component";
+import Loader from 'react-loader-spinner';
 import "./news.style.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 class News extends React.Component {
     constructor(props) {
@@ -23,7 +25,18 @@ class News extends React.Component {
         return ( 
             <div className="container">
                 <h1>NEWS</h1>
-                <CardList articles={this.state.articles}/>
+                {
+                    this.state.articles.length === 0 ? <Loader
+                    type="ThreeDots"
+                    color="#2b2d32"
+                    height={100}
+                    width={100}
+                     //3 secs
+           
+                 /> : (
+                    <CardList articles={this.state.articles}/>
+                 )
+                }
             </div>
          );
     }
