@@ -12,12 +12,13 @@ class News extends React.Component {
         }
     }
 
+    //Fetch data from API when page loads
     componentDidMount(){
         fetch("https://min-api.cryptocompare.com/data/v2/news/?lang=EN&api_key=f1e214227344835a85f8dda04ec637cbf8d5c4d6c8346d3a6ce90b59717c026f")
         .then(response => response.json())
         .then(data => {
             if(data.Message === "News list successfully returned"){
-                this.setState({articles: data.Data.slice(0,30)});
+                this.setState({...this.state.articles, articles: data.Data.slice(0,30)});
             }
         });
     }
